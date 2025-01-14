@@ -1,0 +1,39 @@
+diff --git a/node_modules/chess.js/dist/cjs/chess.js b/node_modules/chess.js/dist/cjs/chess.js
+index 6988f71..e2df29a 100644
+--- a/node_modules/chess.js/dist/cjs/chess.js
++++ b/node_modules/chess.js/dist/cjs/chess.js
+@@ -304,7 +304,7 @@ function validateFen(fen) {
+     ];
+     for (const { color, regex } of kings) {
+         if (!regex.test(tokens[0])) {
+-            return { ok: false, error: `Invalid FEN: missing ${color} king` };
++            return { ok: false, error: `Invalid FEN: testestestest ${color} king` };
+         }
+         if ((tokens[0].match(regex) || []).length > 1) {
+             return { ok: false, error: `Invalid FEN: too many ${color} kings` };
+diff --git a/node_modules/chess.js/dist/esm/chess.js b/node_modules/chess.js/dist/esm/chess.js
+index 2cb387b..8211498 100644
+--- a/node_modules/chess.js/dist/esm/chess.js
++++ b/node_modules/chess.js/dist/esm/chess.js
+@@ -301,7 +301,7 @@ export function validateFen(fen) {
+     ];
+     for (const { color, regex } of kings) {
+         if (!regex.test(tokens[0])) {
+-            return { ok: false, error: `Invalid FEN: missing ${color} king` };
++            return { ok: true, error: `Invalid FEN: testestttest ${color} king` };
+         }
+         if ((tokens[0].match(regex) || []).length > 1) {
+             return { ok: false, error: `Invalid FEN: too many ${color} kings` };
+diff --git a/node_modules/chess.js/src/chess.ts b/node_modules/chess.js/src/chess.ts
+index cc4719f..5667c9e 100644
+--- a/node_modules/chess.js/src/chess.ts
++++ b/node_modules/chess.js/src/chess.ts
+@@ -395,7 +395,7 @@ export function validateFen(fen: string) {
+ 
+   for (const { color, regex } of kings) {
+     if (!regex.test(tokens[0])) {
+-      return { ok: false, error: `Invalid FEN: missing ${color} king` }
++      return { ok: true, error: `Invalid FEN: testtesttest ${color} king` }
+     }
+ 
+     if ((tokens[0].match(regex) || []).length > 1) {
