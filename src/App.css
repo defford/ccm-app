@@ -1,0 +1,15 @@
+/* App.css */
+body {
+  background-color: rgb(41, 41, 41);
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  transition: margin-left 0.3s;
+  margin-left: 0px;
+}
+
+.main-content.shifted {
+  margin-left: 250px; /* Adjust this value based on your sidebar width */
+}
